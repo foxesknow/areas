@@ -34,12 +34,12 @@ BRIDGE_API int32_t Register_MarketData_VTable(const MarketDataVTable *vtable)
     return true;
 }
 
-BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const MarketDataSubscriptionRequest *request)
+BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const char *symbol, void *callbackData, MARKET_DATA_PRINT_HANDLER handler)
 {
     ASSERT_OR_SET_ERROR_AND_RETURN(s_VTable.StructSize != 0, BRIDGE_ERROR_VTABLE_NOT_REGISTERED, 0);
     ASSERT_OR_SET_ERROR_AND_RETURN(s_VTable.MarketData_Subscribe != 0, BRIDGE_ERROR_VTABLE_FUNCTION_NOT_REGISTERED, 0);
 
-    return s_VTable.MarketData_Subscribe(request);
+    return s_VTable.MarketData_Subscribe(symbol, callbackData, handler);
 }
 
 BRIDGE_API int32_t MarketData_Unsubscribe(MARKET_DATA_SUBSCRIPTION_HANDLE handle)
