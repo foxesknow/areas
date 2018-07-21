@@ -1,6 +1,6 @@
 #pragma once
 
-#include <AreasClientBridge\AreasClientBridge.h>
+#include <AlgosBridge\AlgosBridge.h>
 
 #ifdef __cplusplus
 extern "C" {

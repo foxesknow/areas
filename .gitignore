@@ -7,3 +7,7 @@
 /code/Areas/Debug
 /code/Areas/AreasClientBridge/AreasClientBridge.vcxproj.user
 /.vs
+/code/Algos/.vs/Algos/v15
+/code/Algos/Debug
+/code/Algos/AlgosBridge/Debug/AlgosBridge.tlog
+/code/Algos/AlgosBridge/Debug
