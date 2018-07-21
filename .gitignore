@@ -2,4 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/code/Areas/AreasClientBridge
+/code/Areas/AreasClientBridge/Debug
+/code/Areas/.vs/Areas/v15
+/code/Areas/Debug
+/code/Areas/AreasClientBridge/AreasClientBridge.vcxproj.user
+/.vs
