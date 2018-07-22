@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "..\WindowsIncludes.h"
 
 #include <AlgosBridge\AlgosBridge.MarketData.h>
 
@@ -34,7 +34,7 @@ BRIDGE_API int32_t Register_MarketData_VTable(const MarketDataVTable *vtable)
     return true;
 }
 
-BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const char *symbol, void *callbackData, MARKET_DATA_PRINT_HANDLER handler)
+BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const char *symbol, uint64_t callbackData, MARKET_DATA_PRINT_HANDLER handler)
 {
     ASSERT_OR_SET_ERROR_AND_RETURN(s_VTable.StructSize != 0, BRIDGE_ERROR_VTABLE_NOT_REGISTERED, 0);
     ASSERT_OR_SET_ERROR_AND_RETURN(s_VTable.MarketData_Subscribe != 0, BRIDGE_ERROR_VTABLE_FUNCTION_NOT_REGISTERED, 0);

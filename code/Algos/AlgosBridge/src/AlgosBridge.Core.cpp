@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "..\WindowsIncludes.h"
 
 #include <AlgosBridge\AlgosBridge.h>
 

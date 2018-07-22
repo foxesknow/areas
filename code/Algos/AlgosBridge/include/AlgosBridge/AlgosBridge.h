@@ -3,13 +3,21 @@
 #include <stdint.h>
 
 #ifdef __cplusplus
+    #ifdef ALGOSBRIDGE_EXPORTS
+        #define BRIDGE_CLASS __declspec(dllexport)
+    #else
+        #define BRIDGE_CLASS __declspec(dllimport)
+    #endif
+#endif
+
+#ifdef __cplusplus
 extern "C" {
 #endif
 
 #ifdef ALGOSBRIDGE_EXPORTS
-    #define BRIDGE_API extern "C" __declspec(dllexport)
+    #define BRIDGE_API extern "C" __declspec(dllexport)    
 #else
-    #define BRIDGE_API extern "C" __declspec(dllimport)
+    #define BRIDGE_API extern "C" __declspec(dllimport)    
 #endif
 
 #define DECLARE_BRIDGE_HANDLE(name) struct name##__{int unused;}; typedef struct name##__ *name
