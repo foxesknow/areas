@@ -40,16 +40,16 @@ typedef struct tagMarketDataPrint
 
 
 // A handler for a market data event
-typedef void (*MARKET_DATA_PRINT_HANDLER)(MARKET_DATA_SUBSCRIPTION_HANDLE handle, uint64_t CallbackData, const MarketDataPrint *print);
+typedef void (*MARKET_DATA_PRINT_HANDLER)(MARKET_DATA_SUBSCRIPTION_HANDLE handle, void *callbackData, const MarketDataPrint *print);
 
-BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const char *symbol, uint64_t callbackData, MARKET_DATA_PRINT_HANDLER handler);
+BRIDGE_API MARKET_DATA_SUBSCRIPTION_HANDLE MarketData_Subscribe(const char *symbol, void *callbackData, MARKET_DATA_PRINT_HANDLER handler);
 BRIDGE_API int32_t MarketData_Unsubscribe(MARKET_DATA_SUBSCRIPTION_HANDLE handle);
 
 typedef struct tagMarketDataVTable
 {
     size_t StructSize;
 
-    MARKET_DATA_SUBSCRIPTION_HANDLE (*MarketData_Subscribe)(const char *symbol, uint64_t callbackData, MARKET_DATA_PRINT_HANDLER handler);
+    MARKET_DATA_SUBSCRIPTION_HANDLE (*MarketData_Subscribe)(const char *symbol, void *callbackData, MARKET_DATA_PRINT_HANDLER handler);
     int32_t (*MarketData_Unsubscribe)(MARKET_DATA_SUBSCRIPTION_HANDLE handle);
 }MarketDataVTable;
 

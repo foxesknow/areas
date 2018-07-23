@@ -33,6 +33,9 @@
     <ClInclude Include="WindowsIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\AlgosBridge\HandleFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AlgosBridge.cpp">

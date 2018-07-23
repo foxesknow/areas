@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include <AlgosBridge\AlgosBridge.MarketData.h>
+#include <AlgosBridge\HandleFactory.h>
 
 #include <iostream>
 #include <unordered_map>
@@ -11,25 +12,19 @@ uint64_t s_NextHandle = 1;
 
 struct SubscriptionData
 {
-    uint64_t Handle;
+    MARKET_DATA_SUBSCRIPTION_HANDLE Handle;
     std::string Symbol;
-    uint64_t CallbackData;
+    void *CallbackData;
     MARKET_DATA_PRINT_HANDLER Handler;
 };
 
+AlgosBridge::HandleFactory<MARKET_DATA_SUBSCRIPTION_HANDLE> s_MarketDataHandles;
+
 std::unordered_map<std::string, SubscriptionData> s_Subscriptions;
 
-uint64_t AllocateHandle()
+MARKET_DATA_SUBSCRIPTION_HANDLE Impl_MarketData_Subscribe(const char *symbol, void *callbackData, MARKET_DATA_PRINT_HANDLER handler)
 {
-    auto handle = s_NextHandle;
-    s_NextHandle++;
-
-    return handle;
-}
-
-MARKET_DATA_SUBSCRIPTION_HANDLE Impl_MarketData_Subscribe(const char *symbol, uint64_t callbackData, MARKET_DATA_PRINT_HANDLER handler)
-{
-    auto handle = AllocateHandle();
+    auto handle = s_MarketDataHandles.Allocate();
     std::cout << "Subscribing to " << symbol << " with a handle of " << handle << std::endl;
 
     SubscriptionData data;
