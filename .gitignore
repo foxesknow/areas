@@ -18,3 +18,8 @@
 /code/Algos/x64/Debug
 /code/Algos/AlgosBridge/x64/Debug
 /code/Algos/DotNetCoreSubsystem/x64/Debug
+/code/Algos/AlgosBridge/x64/Release
+/code/Algos/AlgosDotNet/obj
+/code/Algos/AlgosTestConsole/x64/Release
+/code/Algos/DotNetCoreSubsystem/x64/Release
+/code/Algos/ManagedLayer/bin/Release

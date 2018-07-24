@@ -166,6 +166,7 @@
     <ClCompile Include="src\AlgosBridge.Core.cpp" />
     <ClCompile Include="src\AlgosBridge.Environment.cpp" />
     <ClCompile Include="src\AlgosBridge.MarketData.cpp" />
+    <ClCompile Include="src\AlgosBridge.Subsystem.cpp" />
     <ClCompile Include="src\LibraryLoader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -4,8 +4,9 @@ namespace ManagedLayer
 {
     public class Bootstrap
     {
-        public static void Main()
+        public static void SubsystemMain(IntPtr subsystemHandle)
         {
+            Console.WriteLine("SubsystemHandle = {0}", subsystemHandle);
             Console.WriteLine("Subscribing");
 
             MarketData.Subscribe("VOD.L", HandlePrint);
