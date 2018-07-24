@@ -5,22 +5,20 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgosBridge", "AlgosBridge\AlgosBridge.vcxproj", "{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LanguageAdapters", "LanguageAdapters", "{17754DFC-2F99-476B-A20D-808C8244904F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DotNetCoreAdapter", "DotNetCoreAdapter\DotNetCoreAdapter.vcxproj", "{3518ED5A-6617-4872-B719-EDDEBB49FC98}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF} = {1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LanguageSubsystems", "LanguageSubsystems", "{17754DFC-2F99-476B-A20D-808C8244904F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgosTestConsole", "AlgosTestConsole\AlgosTestConsole.vcxproj", "{D8EC31C1-8334-46B2-AE61-C67CC6F4A7FE}"
 	ProjectSection(ProjectDependencies) = postProject
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98} = {3518ED5A-6617-4872-B719-EDDEBB49FC98}
 		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF} = {1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagedLayer", "ManagedLayer\ManagedLayer.csproj", "{769A4F96-B612-4900-BD57-653CC7F3A66C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagedLayer", "ManagedLayer\ManagedLayer.csproj", "{769A4F96-B612-4900-BD57-653CC7F3A66C}"
 	ProjectSection(ProjectDependencies) = postProject
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98} = {3518ED5A-6617-4872-B719-EDDEBB49FC98}
+		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF} = {1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DotNetCoreSubsystem", "DotNetCoreSubsystem\DotNetCoreSubsystem.vcxproj", "{5E01B725-A89E-4058-9E1E-428D98A1A793}"
+	ProjectSection(ProjectDependencies) = postProject
 		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF} = {1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}
 	EndProjectSection
 EndProject
@@ -44,16 +42,6 @@ Global
 		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}.Release|x64.Build.0 = Release|x64
 		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}.Release|x86.ActiveCfg = Release|Win32
 		{1819C9D2-DFC9-4003-9EA2-C2BFF20BC7BF}.Release|x86.Build.0 = Release|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Debug|x64.ActiveCfg = Debug|x64
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Debug|x64.Build.0 = Debug|x64
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Debug|x86.ActiveCfg = Debug|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Debug|x86.Build.0 = Debug|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Release|Any CPU.ActiveCfg = Release|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Release|x64.ActiveCfg = Release|x64
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Release|x64.Build.0 = Release|x64
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Release|x86.ActiveCfg = Release|Win32
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98}.Release|x86.Build.0 = Release|Win32
 		{D8EC31C1-8334-46B2-AE61-C67CC6F4A7FE}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{D8EC31C1-8334-46B2-AE61-C67CC6F4A7FE}.Debug|x64.ActiveCfg = Debug|x64
 		{D8EC31C1-8334-46B2-AE61-C67CC6F4A7FE}.Debug|x64.Build.0 = Debug|x64
@@ -76,12 +64,22 @@ Global
 		{769A4F96-B612-4900-BD57-653CC7F3A66C}.Release|x64.Build.0 = Release|Any CPU
 		{769A4F96-B612-4900-BD57-653CC7F3A66C}.Release|x86.ActiveCfg = Release|Any CPU
 		{769A4F96-B612-4900-BD57-653CC7F3A66C}.Release|x86.Build.0 = Release|Any CPU
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Debug|x64.ActiveCfg = Debug|x64
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Debug|x64.Build.0 = Debug|x64
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Debug|x86.Build.0 = Debug|Win32
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Release|Any CPU.ActiveCfg = Release|Win32
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Release|x64.ActiveCfg = Release|x64
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Release|x64.Build.0 = Release|x64
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Release|x86.ActiveCfg = Release|Win32
+		{5E01B725-A89E-4058-9E1E-428D98A1A793}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3518ED5A-6617-4872-B719-EDDEBB49FC98} = {17754DFC-2F99-476B-A20D-808C8244904F}
+		{5E01B725-A89E-4058-9E1E-428D98A1A793} = {17754DFC-2F99-476B-A20D-808C8244904F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA53AADB-1330-4C38-A207-CBC5F4D015A0}

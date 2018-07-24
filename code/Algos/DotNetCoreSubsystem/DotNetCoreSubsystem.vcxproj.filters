@@ -15,48 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AlgosBridge\AlgosBridge.Environment.h">
+    <ClInclude Include="include\DotNetCoreSubsystem\coreclrhost.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AlgosBridge\AlgosBridge.h">
+    <ClInclude Include="include\DotNetCoreSubsystem\DotNetHost.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\AlgosBridge\AlgosBridge.MarketData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AlgosBridge\LibraryLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WindowsIncludes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AlgosBridge\HandleFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AlgosBridge\AlgosBridge.Subsystem.h">
+    <ClInclude Include="include\DotNetCoreSubsystem\DotNetCoreSubsystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AlgosBridge.cpp">
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DotNetCoreSubsystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\AlgosBridge.Core.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\AlgosBridge.Environment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\AlgosBridge.MarketData.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\LibraryLoader.cpp">
+    <ClCompile Include="src\DotNetHost.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

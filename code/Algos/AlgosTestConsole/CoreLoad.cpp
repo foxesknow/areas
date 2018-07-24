@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include <DotNetCoreAdapter\DotNetHost.h>
+#include <DotNetCoreSubsystem\DotNetHost.h>
 
 DotNetHost *s_Host;
 
